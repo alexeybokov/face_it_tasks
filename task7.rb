@@ -82,32 +82,37 @@ module Tasks
     end
   end
 
-  puts "Enter task number from 1 to 6:"
-  t = gets.chomp.to_i
+  i = 0
 
-  if t == 1
-    Tasks::Task1.puts_ruby
-  elsif t == 2 # TODO
-    puts "Enter circle radius:"
-    a = gets.chomp.to_i
-    Tasks::Circle.new(a).draw
-  elsif t == 3
-    puts "Enter matrix size:"
-    a = gets.chomp.to_i
-    Tasks::Task3.draw_matrix(a)
-  elsif t == 4
-    hash = { key1: {}, key2: {}, key3: { key4: 'str', key5: 'str2', key6: { key7: { key8: 1, key9: [2]} } }}
-    p Tasks::Task4.nested_hash_value(hash, :key9)
-  elsif t == 5
-    str = 'i love ruby'
-    p Tasks::Task5.formatize(str, :cap_words)
-    p Tasks::Task5.formatize(str, :downcase)
-    p Tasks::Task5.formatize(str, :css_words)
-  elsif t == 6
-    array = [[1, 2, 3, 4, '1'], ['2', '5', '10'], [111, 222, 333, 444], ['i', 'love', 'ruby'], { key: 'value' }, [[['text', 100_000]]]]
-    p Tasks::Task6.get_all(array, String)
-    p Tasks::Task6.get_all(array, Integer)
-  else
-    puts "Wrong number! You must enter task number from 1 to 6!"
+  while i < 6 do
+    puts "Enter task number from 1 to 6:"
+    t = gets.chomp.to_i
+
+    if t == 1
+      Tasks::Task1.puts_ruby
+    elsif t == 2 # TODO
+      puts "Enter circle radius:"
+      a = gets.chomp.to_i
+      Tasks::Circle.new(a).draw
+    elsif t == 3
+      puts "Enter matrix size:"
+      a = gets.chomp.to_i
+      Tasks::Task3.draw_matrix(a)
+    elsif t == 4
+      hash = { key1: {}, key2: {}, key3: { key4: 'str', key5: 'str2', key6: { key7: { key8: 1, key9: [2]} } }}
+      p Tasks::Task4.nested_hash_value(hash, :key9)
+    elsif t == 5
+      str = 'i love ruby'
+      p Tasks::Task5.formatize(str, :cap_words)
+      p Tasks::Task5.formatize(str, :downcase)
+      p Tasks::Task5.formatize(str, :css_words)
+    elsif t == 6
+      array = [[1, 2, 3, 4, '1'], ['2', '5', '10'], [111, 222, 333, 444], ['i', 'love', 'ruby'], { key: 'value' }, [[['text', 100_000]]]]
+      p Tasks::Task6.get_all(array, String)
+      p Tasks::Task6.get_all(array, Integer)
+    else
+      puts "Wrong number! You must enter task number from 1 to 6!"
+    end
+    i += 1
   end
 end
