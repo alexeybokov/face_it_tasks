@@ -15,11 +15,12 @@ module Tasks
   end
 
   class Circle
+    include Tasks
     def initialize(radius)
       @radius = radius.to_i
     end
 
-    def self.draw
+    def draw
       (0..@radius*2).each do |x|
         (0..@radius*2).each do |y|
           print distance_from_center(x,y).round == @radius ? '*' : '.'
