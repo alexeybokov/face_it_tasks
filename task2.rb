@@ -25,6 +25,6 @@ class Circle
   end
 end
 
-puts "Enter circle radius:"
-a = gets.chomp.to_i
-Circle.new(a).draw
+# puts "Enter circle radius:"
+# a = gets.chomp.to_i
+# Circle.new(a).draw

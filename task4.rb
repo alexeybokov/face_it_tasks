@@ -12,5 +12,5 @@ class Task4
   end
 end
 
-hash = { key1: {}, key2: {}, key3: { key4: 'str', key5: 'str2', key6: { key7: { key8: 1, key9: [2]} } }}
-Task4.new.nested_hash_value(hash, :key9)
+# hash = { key1: {}, key2: {}, key3: { key4: 'str', key5: 'str2', key6: { key7: { key8: 1, key9: [2]} } }}
+# Task4.new.nested_hash_value(hash, :key9)

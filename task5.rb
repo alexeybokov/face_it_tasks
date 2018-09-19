@@ -13,8 +13,8 @@ class Task5
   end
 end
 
-str = 'i love ruby'
+# str = 'i love ruby'
 
-p Task5.new.formatize(str, :cap_words)
-p Task5.new.formatize(str, :downcase)
-p Task5.new.formatize(str, :css_words)
+# p Task5.new.formatize(str, :cap_words)
+# p Task5.new.formatize(str, :downcase)
+# p Task5.new.formatize(str, :css_words)

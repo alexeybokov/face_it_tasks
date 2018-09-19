@@ -12,9 +12,19 @@ module Tasks
     when 2
       Circle.new(ask_for_radius).draw
     when 3
+      Matrix.new.draw_matrix(ask_for_size_matrix)
     when 4
+      hash = { key1: {}, key2: {}, key3: { key4: 'str', key5: 'str2', key6: { key7: { key8: 1, key9: [2]} } }}
+      Task4.new.nested_hash_value(hash, :key9)
     when 5
+      str = 'i love ruby'
+      p Task5.new.formatize(str, :cap_words)
+      p Task5.new.formatize(str, :downcase)
+      p Task5.new.formatize(str, :css_words)
     when 6
+      array = [[1, 2, 3, 4, '1'], ['2', '5', '10'], [111, 222, 333, 444], ['i', 'love', 'ruby'], { key: 'value' }, [[['text', 100_000]]]]
+      p Task6.new.get_all(array, String)
+      p Task6.new.get_all(array, Integer)
     end
   end
 
@@ -25,6 +35,15 @@ module Tasks
       radius = gets.chomp().to_i
     end
     radius
+  end
+
+  def ask_for_size_matrix
+    size = 0
+    while size <= 0 do
+      puts "Enter matrix size: \n"
+      size = gets.chomp().to_i
+    end
+    size
   end
 
   def run!
