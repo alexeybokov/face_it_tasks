@@ -1,15 +1,11 @@
-def draw_matrix(a)
-  a.times do |i|
-    row = []
-    a.times do |j|
-      row << (i == j ? 1 : 0)
-    end
+def draw_matrix(n)
+  n.times do |i|
+    row = Array.new(n,0)
+    row[i] = 1
     p row.join(' ')
   end
 end
 
 puts "Enter matrix size:"
-
-a = gets.chomp.to_i
-
-p draw_matrix(a)
+n = gets.chomp.to_i
+p draw_matrix(n)
