@@ -3,7 +3,7 @@
 Dir[File.join('../tasks/**/*.rb')].each { |f| require f }
 
 module Tasks
-  extend self
+  module_function
 
   def run_task!(task_number)
     case task_number
@@ -48,8 +48,8 @@ module Tasks
 
   def run!
     task_number = -1
-    while true do
-      while !(0..6).include?(task_number)
+    loop do
+      until(0..6).include?(task_number)
         puts "Enter number of task you want to run from 1 to 6 (use 0 to exit):\n"
         task_number = gets.chomp().to_i
       end
