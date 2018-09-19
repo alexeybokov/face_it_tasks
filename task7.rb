@@ -8,7 +8,7 @@ module Tasks
   def run_task!(task_number)
     case task_number
     when 1
-      Task1
+      Task1.new.puts_ruby
     when 2
       Circle.new(ask_for_radius).draw
     when 3
