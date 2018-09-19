@@ -1,3 +1,5 @@
+# Написать метод, который принимает многомерный массив и тип данных, возвращает массив этих типов.
+
 class Task6
   def get_all(array, klass)
     array.flatten.select { |i| i.class == klass }            #fail "wrong klass provided" unless klass.include?(Integer)

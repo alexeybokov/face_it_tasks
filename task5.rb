@@ -1,3 +1,5 @@
+# Написать метод, который принимает строку и приводит её в CamelCase, ruby_case_underscore и css-case.
+
 class Task5
   def formatize(str, action)
     case action

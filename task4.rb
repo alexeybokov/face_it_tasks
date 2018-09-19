@@ -1,3 +1,5 @@
+# Написать рекурсивный метод для поиска значения ключа key9 в хеше
+
 class Task4
   def nested_hash_value(obj,key)
     if obj.respond_to?(:key?) && obj.key?(key)

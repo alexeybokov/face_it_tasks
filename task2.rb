@@ -1,3 +1,5 @@
+# Нарисовать в консоле круг, диаметр\радиус которого задается с консоли.
+
 class Circle
   def initialize(radius)
     @radius = radius.to_i
